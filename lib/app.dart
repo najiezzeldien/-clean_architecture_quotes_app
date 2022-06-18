@@ -15,7 +15,7 @@ class QuoteApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => di.sl<LocaleCubit>()),
+        BlocProvider(create: (context) => di.sl<LocaleCubit>()..getSavedLang()),
         // BlocProvider(create: (context) => di.sl<LocaleCubit>()),
       ],
       child: BlocBuilder<LocaleCubit, LocaleState>(
